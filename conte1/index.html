@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conte Infantil de Josep i Ander</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+      body {
+        font-family: 'Fredoka One', sans-serif;
+      }
+      .page {
+        display: none;
+        transition: transform 0.5s;
+      }
+      .page.active {
+        display: block;
+        transform: rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body class="bg-blue-200 flex items-center justify-center h-screen">
+    <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <div id="page1" class="page active p-8">
+        <h1 class="text-3xl mb-4">Coneixent a Josep i Ander</h1>
+        <img src="1.jpeg" alt="Josep i Ander al parc" class="w-full mb-4" />
+        <p class="text-lg">
+          Josep tenia 6 anys i li encantaven les matemàtiques. Podia resoldre qualsevol problema amb un somriure a la seva cara bonica. El seu germà
+          petit, Ander, tenia 2 anys i gaudia molt menjant. Sempre tenia una galeta o una poma a la mà, i els seus ulls grans i verd-gris brillaven
+          d'alegria.
+        </p>
+      </div>
+      <div id="page2" class="page p-8">
+        <h1 class="text-3xl mb-4">El Misteri del Parc</h1>
+        <img src="2.jpeg" alt="Josep i Ander troben una pista" class="w-full mb-4" />
+        <p class="text-lg">
+          Un dia assolellat, mentre jugaven al parc, Josep i Ander van trobar un paper misteriós a terra. Josep el va aixecar i, amb els seus grans
+          ulls marrons plens de curiositat, va dir: "Ander, mira això!" Ander, amb una galeta a la mà, ho observava fascinat.
+        </p>
+      </div>
+      <div id="page3" class="page p-8">
+        <h1 class="text-3xl mb-4">Comença l'Aventura</h1>
+        <img src="3.jpeg" alt="Josep i Ander resolent un trencaclosques" class="w-full mb-4" />
+        <p class="text-lg">
+          Van decidir seguir les pistes que els portaven per camins i trencaclosques al bosc. Josep, amb la seva llibreta a la mà, resolia cada
+          trencaclosques matemàtic amb facilitat, mentre Ander, amb la seva motxilla plena de menjar, el seguia feliç.
+        </p>
+      </div>
+      <div id="page4" class="page p-8">
+        <h1 class="text-3xl mb-4">El Trobat del Guardià del Son</h1>
+        <img src="4.jpeg" alt="Josep i Ander coneixen al Guardià del Son" class="w-full mb-4" />
+        <p class="text-lg">
+          Al mig del bosc, es van trobar amb el Guardià del Son, una figura màgica i amable que els va ensenyar la importància del descans. Josep
+          escoltava atentament, mentre Ander, amb els ulls mig tancats, badallava però es mantenia curiós.
+        </p>
+      </div>
+      <div id="page5" class="page p-8">
+        <h1 class="text-3xl mb-4">Vencent les Seves Porques</h1>
+        <img src="5.jpeg" alt="Josep i Ander enfrontant les seves porques" class="w-full mb-4" />
+        <p class="text-lg">
+          Amb l'ajuda del Guardià del Son, Josep i Ander van aprendre a vèncer les seves porques. Josep va descobrir que els "monstres" no eren reals
+          i Ander va trobar que dormir podia ser divertit i ple de somnis meravellosos.
+        </p>
+      </div>
+      <div id="page6" class="page p-8">
+        <h1 class="text-3xl mb-4">El Retorn a Casa</h1>
+        <img src="6.jpeg" alt="Josep i Ander tornant a casa" class="w-full mb-4" />
+        <p class="text-lg">
+          Després de la seva aventura, Josep i Ander van tornar a casa plens de noves experiències i feliços. Josep portava la seva llibreta i un
+          somriure de satisfacció, mentre Ander, cansat però content, s'acurrucava en els braços del seu germà.
+        </p>
+      </div>
+      <div class="flex justify-between p-4">
+        <button id="prevPage" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Anterior</button>
+        <button id="nextPage" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Següent</button>
+      </div>
+    </div>
+
+    <script>
+      let currentPage = 1
+      const totalPages = 6
+
+      document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+          document.getElementById(`page${currentPage}`).classList.remove('active')
+          currentPage--
+          document.getElementById(`page${currentPage}`).classList.add('active')
+        }
+      })
+
+      document.getElementById('nextPage').addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          document.getElementById(`page${currentPage}`).classList.remove('active')
+          currentPage++
+          document.getElementById(`page${currentPage}`).classList.add('active')
+        }
+      })
+    </script>
+  </body>
+</html>
