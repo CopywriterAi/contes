@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuento Infantil</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+      body {
+        font-family: 'Fredoka One', sans-serif;
+      }
+      .page {
+        display: none;
+        transition: transform 0.5s;
+      }
+      .page.active {
+        display: block;
+        transform: rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body class="bg-blue-100">
+    <div class="container mx-auto mt-10">
+      <div class="flex justify-end mb-4">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded mx-2" onclick="setLanguage('ca')">Català</button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded mx-2" onclick="setLanguage('en')">English</button>
+        <button class="bg-red-500 text-white px-4 py-2 rounded mx-2" onclick="setLanguage('fr')">Français</button>
+      </div>
+      <div id="story" class="bg-white p-6 rounded-lg shadow-lg relative">
+        <div class="page active" id="page1">
+          <img src="1.jpeg" alt="Page 1" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Mia, una nena de gairebé 3 anys, vivia en una habitació plena de joguines meravelloses. Li encantava jugar amb les seves nines,
+              adornar-se amb collarets i anells, i posar-se els seus vestits de princesa. Sempre tenia un somriure alegre i una espurna de trapelleria
+              als ulls.
+            </p>
+            <p class="en hidden">
+              Mia, a nearly 3-year-old girl, lived in a room full of wonderful toys. She loved playing with her baby dolls, adorning herself with
+              necklaces and rings, and wearing her princess dresses. She always had a cheerful smile and a spark of mischief in her eyes.
+            </p>
+            <p class="fr hidden">
+              Mia, une petite fille de presque 3 ans, vivait dans une chambre pleine de jouets merveilleux. Elle adorait jouer avec ses poupées, se
+              parer de colliers et d'anneaux, et porter ses robes de princesse. Elle avait toujours un sourire joyeux et une étincelle de malice dans
+              les yeux.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page2">
+          <img src="2.jpeg" alt="Page 2" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Un dia, mentre jugava, Mia va descobrir una porta màgica a la seva habitació. La porta brillava amb llums de colors vius i semblava
+              convidar-la a entrar. Amb curiositat i emoció, Mia va decidir travessar la porta.
+            </p>
+            <p class="en hidden">
+              One day, while playing, Mia discovered a magical door in her room. The door glowed with vibrant lights and seemed to invite her in. With
+              curiosity and excitement, Mia decided to step through the door.
+            </p>
+            <p class="fr hidden">
+              Un jour, en jouant, Mia a découvert une porte magique dans sa chambre. La porte brillait de lumières vives et semblait l'inviter à
+              entrer. Avec curiosité et excitation, Mia a décidé de franchir la porte.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page3">
+          <img src="3.jpeg" alt="Page 3" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              A l'altre costat de la porta, Mia va trobar un lloc increïble: el Regne dels Somnis. Hi havia castells de colors, arbres de cotó de
+              sucre i criatures amigables per tot arreu. Mia estava emocionada i preparada per explorar aquest nou món.
+            </p>
+            <p class="en hidden">
+              On the other side of the door, Mia found an incredible place: the Kingdom of Dreams. There were colorful castles, cotton candy trees,
+              and friendly creatures everywhere. Mia was excited and ready to explore this new world.
+            </p>
+            <p class="fr hidden">
+              De l'autre côté de la porte, Mia a trouvé un endroit incroyable: le Royaume des Rêves. Il y avait des châteaux colorés, des arbres en
+              barbe à papa et des créatures amicales partout. Mia était excitée et prête à explorer ce nouveau monde.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page4">
+          <img src="4.jpeg" alt="Page 4" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Mentre caminava pel Regne dels Somnis, Mia va trobar un grup d'animals amigables: un conill, un ós i un unicorn. Tots li van donar la
+              benvinguda amb somriures i abraçades, feliços de tenir una nova amiga.
+            </p>
+            <p class="en hidden">
+              While walking through the Kingdom of Dreams, Mia met a group of friendly animals: a rabbit, a bear, and a unicorn. They all welcomed her
+              with smiles and hugs, happy to have a new friend.
+            </p>
+            <p class="fr hidden">
+              En se promenant dans le Royaume des Rêves, Mia a rencontré un groupe d'animaux amicaux: un lapin, un ours et une licorne. Ils l'ont tous
+              accueillie avec des sourires et des câlins, heureux d'avoir une nouvelle amie.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page5">
+          <img src="5.jpeg" alt="Page 5" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Els nous amics de Mia la van convidar a una gran festa al castell. Hi havia globus, pastissets i música per tot arreu. Mia, amb el seu
+              vestit de princesa, va ballar i riure tota la tarda, envoltada dels seus amics animals.
+            </p>
+            <p class="en hidden">
+              Mia's new friends invited her to a big party at the castle. There were balloons, cupcakes, and music everywhere. Mia, in her princess
+              dress, danced and laughed all afternoon, surrounded by her animal friends.
+            </p>
+            <p class="fr hidden">
+              Les nouveaux amis de Mia l'ont invitée à une grande fête au château. Il y avait des ballons, des cupcakes et de la musique partout. Mia,
+              dans sa robe de princesse, a dansé et ri tout l'après-midi, entourée de ses amis animaux.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page6">
+          <img src="6.jpeg" alt="Page 6" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Quan la nit va començar a caure al Regne dels Somnis, Mia va sentir una mica de por. No li agradava dormir. Però els seus amics animals
+              la van acompanyar i li van mostrar que la nit també podia ser màgica, amb estrelles brillants i cuques de llum que il·luminaven el cel.
+            </p>
+            <p class="en hidden">
+              As night began to fall in the Kingdom of Dreams, Mia felt a little scared. She didn't like to sleep. But her animal friends stayed with
+              her and showed her that night could also be magical, with bright stars and fireflies lighting up the sky.
+            </p>
+            <p class="fr hidden">
+              Lorsque la nuit a commencé à tomber dans le Royaume des Rêves, Mia a ressenti un peu de peur. Elle n'aimait pas dormir. Mais ses amis
+              animaux l'ont accompagnée et lui ont montré que la nuit pouvait aussi être magique, avec des étoiles brillantes et des lucioles
+              illuminant le ciel.
+            </p>
+          </div>
+        </div>
+        <div class="page" id="page7">
+          <img src="7.jpeg" alt="Page 7" class="mx-auto mb-4" />
+          <div class="text-center">
+            <p class="ca">
+              Al final de la seva aventura, Mia es va sentir més tranquil·la. Es va acurrucar amb els seus nous amics animals sota el cel estrellat. A
+              poc a poc, Mia va tancar els ulls i es va adormir, sentint-se feliç i segura al Regne dels Somnis.
+            </p>
+            <p class="en hidden">
+              At the end of her adventure, Mia felt calmer. She cuddled up with her new animal friends under the starry sky. Slowly, Mia closed her
+              eyes and fell asleep, feeling happy and safe in the Kingdom of Dreams.
+            </p>
+            <p class="fr hidden">
+              À la fin de son aventure, Mia se sentit plus calme. Elle se pelotonna avec ses nouveaux amis animaux sous le ciel étoilé. Lentement, Mia
+              ferma les yeux et s'endormit, se sentant heureuse et en sécurité dans le Royaume des Rêves.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-6">
+        <button class="bg-gray-300 px-4 py-2 rounded" onclick="prevPage()">Anterior</button>
+        <button class="bg-gray-300 px-4 py-2 rounded" onclick="nextPage()">Següent</button>
+      </div>
+    </div>
+
+    <script>
+      let currentPage = 1
+      const totalPages = 7
+
+      function setLanguage(lang) {
+        document.querySelectorAll(`#story .page p`).forEach((p) => p.classList.add('hidden'))
+        document.querySelectorAll(`#story .page p.${lang}`).forEach((p) => p.classList.remove('hidden'))
+      }
+
+      function showPage(page) {
+        document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'))
+        document.getElementById(`page${page}`).classList.add('active')
+      }
+
+      function nextPage() {
+        if (currentPage < totalPages) {
+          currentPage++
+          showPage(currentPage)
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--
+          showPage(currentPage)
+        }
+      }
+
+      // Set initial language to Catalan
+      setLanguage('ca')
+    </script>
+  </body>
+</html>
